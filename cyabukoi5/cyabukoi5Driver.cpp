@@ -17,20 +17,19 @@ using namespace std;
 
 using namespace StringNS;
 
-
-int main(){
+int main() {
 	bool a;
 	bool b;
 	cout << "---------IMPROVING THE STRING CLASS------------------" << endl;
 	String346 STG1("EEE");
 	String346 S("D");
-	cout << "xxxxx"<<S;
+	cout << "xxxxx" << S;
 	String346 STG2;
 	STG2 = "imPROVISIONAL";
 	STG2.view();
 	cout << "\n\nAssignment and ! and one prefix are working" << endl;
 	String346 STG3("abc");
-	cout << STG3<< endl;
+	cout << STG3 << endl;
 	cout << "0000 " << !STG3 << " 000000" << endl;
 	a = STG1 > STG3;
 
@@ -56,7 +55,7 @@ int main(){
 	cout << "Testing  for increment postfix prefix\n";
 	String346 go("YYY");
 	go++;
-	cout << "Should print ZZZ::::::::::"<<go;
+	cout << "Should print ZZZ::::::::::" << go;
 	//go.view();
 	cout << "\n";
 	cout << "----------Testing for concatenation and insertion----------\n" << endl;
@@ -67,21 +66,21 @@ int main(){
 	//CO3.getSize() = CO1.getSize() + CO2.getSize();
 	//cout << (b);
 	cout << ",,,,,," << endl;
-	//cout << (x + y); 
+	//cout << (x + y);
 	cout << "\n,,,,,,,,,,,,,";
 	cout << "\n";
 	cout << (x + y);
 	z += s;
 	cout << "\n" << z << endl;
-	
+
 	y += "DAVE";
 	cout << "\nxxx :";
 	cout << y;
 	cout << " xxx" << endl;
 	cout << "Testing for extraction cin-----" << endl;
 	cout << "Enter the string:" << endl;
-	cin >>z;
-	cout <<"coutz:: "<<z<< endl;
+	cin >> z;
+	cout << "coutz:: " << z << endl;
 	//cout <<"cout::"<< z;
 
 	//CO2.view();
@@ -96,10 +95,9 @@ int main(){
 	String346 N("goodbye");
 	String346 o("az");
 	String346 p("ax");
-	b=M < N;
+	b = M < N;
 	bool d = o > p;
-	cout <<"XX"<< d<<endl;
-
+	cout << "XX" << d << endl;
 
 	/*stringstream input("xxxdfjsfhfjshdfsf");
 	String346 I(" ");
@@ -112,14 +110,11 @@ int main(){
 	me = me;
 	cout << "\n";
 
-
 	cout << "Testing for string on right < and > object on left" << endl;
 	String346 son("abz");
-	bool t ="abz" == son;
+	bool t = "abz" == son;
 	cout << t << endl;
-	
+
 	system("Pause");
-	return 0; 
-
+	return 0;
 }
-

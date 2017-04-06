@@ -6,7 +6,7 @@
 *** INSTRUCTOR : GAMRADT
 *********************************************************************
 *** DESCRIPTION :This implementation file will implement the a String346
-				 function step by step.The implementationd shows non member 
+				 function step by step.The implementationd shows non member
 				 friend functions,function overloading, operator
 				 overloading and code reuse application
 *******************************************************************/
@@ -15,13 +15,12 @@
 #include <cstdlib>
 #include<cstring>
 
-namespace StringNS{
-
+namespace StringNS {
 	/********************************************************************
 	*** FUNCTION : constructor
 	*********************************************************************
 	*** DESCRIPTION : default  parametized consructor that creates a string 346 from the passed in char*
-	*** INPUT ARGS : inStr 
+	*** INPUT ARGS : inStr
 	*** OUTPUT ARGS :none
 	*** IN/OUT ARGS :none
 	*** RETURN : nothing
@@ -48,13 +47,12 @@ namespace StringNS{
 				}
 			}
 		}
-		
 	}
 
 	/********************************************************************
 	*** FUNCTION : copy constructor
 	*********************************************************************
-	*** DESCRIPTION : It accepts an instance of a class String and then it 
+	*** DESCRIPTION : It accepts an instance of a class String and then it
 					  reuses the copy function with the invoking instance( this)
 	*** INPUT ARGS : copiedStr- the object to be copied
 	*** OUTPUT ARGS :none
@@ -64,14 +62,13 @@ namespace StringNS{
 
 	String346::String346(const String346 &copiedStr) :data(NULL), size(0)
 	{
-	
-		(*this)=(copiedStr);
+		(*this) = (copiedStr);
 	}
 
 	/********************************************************************
 	*** FUNCTION : destructor
 	*********************************************************************
-	*** DESCRIPTION : reuses destroy to free memory of the String class 
+	*** DESCRIPTION : reuses destroy to free memory of the String class
 	*** INPUT ARGS : none
 	*** OUTPUT ARGS :none
 	*** IN/OUT ARGS :none
@@ -86,7 +83,7 @@ namespace StringNS{
 	*********************************************************************
 	*** DESCRIPTION : accepts and instance and copies it in the invoking
 					  instance access through the this pointer
-	*** INPUT ARGS : cop 
+	*** INPUT ARGS : cop
 	*** OUTPUT ARGS :
 	*** IN/OUT ARGS :
 	*** RETURN : (*this)
@@ -119,16 +116,16 @@ namespace StringNS{
 		}
 		else
 
-		return (*this);
+			return (*this);
 	}
 	/********************************************************************
 	*** FUNCTION : operator =
 	*********************************************************************
 	*** DESCRIPTION : It creates an String346 string from a char* and
-					  copies a passed in char string into the String 
+					  copies a passed in char string into the String
 					  class instance.
 	*** INPUT ARGS  : char * inStr1
-	*** OUTPUT ARGS : 
+	*** OUTPUT ARGS :
 	*** IN/OUT ARGS :
 	*** RETURN : (*this) invoking class
 	******************************************************************/
@@ -140,7 +137,7 @@ namespace StringNS{
 		return (*this);
 	}
 	/********************************************************************
-	*** FUNCTION : operator + 
+	*** FUNCTION : operator +
 	*********************************************************************
 	*** DESCRIPTION :It concatenates a Passed in object and the this instance
 					 and stores the result in a temporary String346 object
@@ -157,9 +154,9 @@ namespace StringNS{
 		using std::endl;
 		unsigned int i = 0;
 		unsigned int j = 0;
-	    String346 temp(*this);		
+		String346 temp(*this);
 		temp.size = (*this).getSize() + pInst.getSize();
-		if (temp.size != 0) 
+		if (temp.size != 0)
 		{
 			temp.data = new(nothrow) char[temp.getSize()];
 			if (data == NULL)
@@ -177,7 +174,7 @@ namespace StringNS{
 			temp.data[i] = pInst.data[j];
 			j++;
 		}
-	
+
 		return (temp);
 	}
 	/********************************************************************
@@ -192,10 +189,9 @@ namespace StringNS{
 	********************************************************************/
 	String346 String346::operator+(const char *inStr2)
 	{
-	
 		String346 temp(inStr2);
 
-		(*this)+(temp);
+		(*this) + (temp);
 
 		return (temp);
 	}
@@ -210,16 +206,16 @@ namespace StringNS{
 	*** RETURN :return( *this)
 	********************************************************************/
 	String346 & String346:: operator+=(const String346 &right)
-	{		
-		(*this)=(*this) + right;
-			
+	{
+		(*this) = (*this) + right;
+
 		return(*this);
 	}
 	/********************************************************************
 	*** FUNCTION :operator +=
 	*********************************************************************
 	*** DESCRIPTION : Concatenate the this and the passedIn char* and
-					 saves the result in the this instance, reuses 
+					 saves the result in the this instance, reuses
 	*** INPUT ARGS : char * right
 	*** OUTPUT ARGS :
 	*** IN/OUT ARGS :
@@ -240,9 +236,9 @@ namespace StringNS{
 	*** INPUT ARGS :String346 & right, String346 & left
 	*** OUTPUT ARGS :
 	*** IN/OUT ARGS :
-	*** RETURN : boolean 
+	*** RETURN : boolean
 	********************************************************************/
-    bool operator <(const String346 & left, const String346 & right)
+	bool operator <(const String346 & left, const String346 & right)
 	{
 		bool c;
 		unsigned loopSize = 0;
@@ -250,22 +246,22 @@ namespace StringNS{
 		{
 			loopSize = (right).getSize();
 		}
-		else{
+		else {
 			loopSize = left.getSize();
 		}
 		for (unsigned int i = 0; i < loopSize; i++)
 		{
-			if (left.data[i]<right.data[i])        // if the left object is less than right object 
+			if (left.data[i] < right.data[i])        // if the left object is less than right object
 			{
 				c = true;
 			}
-			else if (right.data[i]< left.data[i])  // if the left object is greater than left object
+			else if (right.data[i] < left.data[i])  // if the left object is greater than left object
 			{
 				c = false;
 			}
 			else                                   //if they are equal but one has a larger size ie "good" and "goodbye"
 			{
-				if (left.getSize() < right.getSize()) 
+				if (left.getSize() < right.getSize())
 				{
 					c = true;
 				}
@@ -280,13 +276,13 @@ namespace StringNS{
 	/********************************************************************
 	*** FUNCTION :operator <
 	*********************************************************************
-	*** DESCRIPTION : compares a char * argument on the left to an object 
+	*** DESCRIPTION : compares a char * argument on the left to an object
 					  to the right, it creates a temp object of the char *
 					  and reuses the operator < above to compare
 	*** INPUT ARGS :char * left, String346 & rightObj
 	*** OUTPUT ARGS :
 	*** IN/OUT ARGS :
-	*** RETURN : bolean 
+	*** RETURN : bolean
 	********************************************************************/
 	bool operator <(const char * left, const String346 & rightObj)
 	{
@@ -297,7 +293,7 @@ namespace StringNS{
 	*** FUNCTION :operator <
 	*********************************************************************
 	*** DESCRIPTION : recieves an object String346 on the right and char*
-					  on the left and compares the two 
+					  on the left and compares the two
 	*** INPUT ARGS :char * inStr3, String346 &leftObj
 	*** OUTPUT ARGS :
 	*** IN/OUT ARGS :
@@ -308,7 +304,6 @@ namespace StringNS{
 		String346 temp(right);
 
 		return leftObj < temp;
-
 	}
 	/********************************************************************
 	*** FUNCTION : operator > "greaterThan"
@@ -323,51 +318,49 @@ namespace StringNS{
 	bool operator >(const String346 & left, const String346 & right)
 	{
 		bool b;
-		if (left<(right)==false)
+		if (left < (right) == false)
 		{
 			b = true;
-
 		}
-		else 
+		else
 		{
 			b = false;
-		
 		}
 		return b;
 	}
 	/********************************************************************
-	*** FUNCTION : operator > 
+	*** FUNCTION : operator >
 	*********************************************************************
 	*** DESCRIPTION : reuses operator >( Obj,Obj), it creates a String346
-					  from the passed in char * compares it to the right 
+					  from the passed in char * compares it to the right
 					  object by reusing the operator> above
 	*** INPUT ARGS :char *left,String346 & rightObj
 	*** OUTPUT ARGS :
 	*** IN/OUT ARGS :
 	*** RETURN :boolean value
 	********************************************************************/
-     bool operator >(const char *left, const String346 & rightObj)
+	bool operator >(const char *left, const String346 & rightObj)
 	{
 		String346 temp(left);
 
-		return temp>rightObj;
+		return temp > rightObj;
 	}
-	 /********************************************************************
-	 *** FUNCTION : operator >	
-	 *********************************************************************
-	 *** DESCRIPTION : recieves an object on the left and char* on the right
-					   and reuses the operator >(obj,obj) function
-	 *** INPUT ARGS :String346 & leftObj, char *inStr4
-	 *** OUTPUT ARGS :
-	 *** IN/OUT ARGS :
-	 *** RETURN :boolean value
-	 ********************************************************************/
-	 bool operator >(const String346 & leftObj, const char*right)
-	 {
-		 String346 temp(right);
+	/********************************************************************
+	*** FUNCTION : operator >
+	*********************************************************************
+	*** DESCRIPTION : recieves an object on the left and char* on the right
+					  and reuses the operator >(obj,obj) function
+	*** INPUT ARGS :String346 & leftObj, char *inStr4
+	*** OUTPUT ARGS :
+	*** IN/OUT ARGS :
+	*** RETURN :boolean value
+	********************************************************************/
+	bool operator >(const String346 & leftObj, const char*right)
+	{
+		String346 temp(right);
 
-		 return (leftObj>temp);
-	 }
+		return (leftObj > temp);
+	}
 	/********************************************************************
 	*** FUNCTION :operator == "equal"
 	*********************************************************************
@@ -383,7 +376,7 @@ namespace StringNS{
 	bool operator ==(const String346 & left, const String346 & right)
 	{
 		bool b;
-		if ((left<right) == false && (left>right) == false)
+		if ((left < right) == false && (left > right) == false)
 		{
 			b = true;
 		}
@@ -397,41 +390,39 @@ namespace StringNS{
 	/********************************************************************
 	*** FUNCTION : operator ==
 	*********************************************************************
-	*** DESCRIPTION : reuses the above equal function by creating a string346 
-					  from the passed in char * and comparing the equality of 
+	*** DESCRIPTION : reuses the above equal function by creating a string346
+					  from the passed in char * and comparing the equality of
 					  the two objects
 	*** INPUT ARGS :char *left, String346 & rightObj
 	*** OUTPUT ARGS :
 	*** IN/OUT ARGS :
 	*** RETURN :(*this).equal(Temp)
 	********************************************************************/
-	 bool operator ==(const char *left, const String346 & rightObj)
+	bool operator ==(const char *left, const String346 & rightObj)
 	{
-		bool b=true;
+		bool b = true;
 		String346 temp(left);
-		b = (temp==rightObj);
-		return b ;
-
+		b = (temp == rightObj);
+		return b;
 	}
-	 /********************************************************************
-	 *** FUNCTION : operator ==
-	 *********************************************************************
-	 *** DESCRIPTION : reuses the above equal function by creating a string346
-				   	   from the passed in char * on the right and compares both
-					   return true if they are equal
-	 *** INPUT ARGS :String346 &leftObj, char *right
-	 *** OUTPUT ARGS :
-	 *** IN/OUT ARGS :
-	 *** RETURN :(*this).equal(Temp)
-	 ********************************************************************/
-	 bool operator ==(const String346 &leftObj, const char *right)
-	 {
-		 bool b=true;
-		 String346 temp(right);
-		 b = (leftObj==temp);
-		 return b;
-
-	 }
+	/********************************************************************
+	*** FUNCTION : operator ==
+	*********************************************************************
+	*** DESCRIPTION : reuses the above equal function by creating a string346
+					  from the passed in char * on the right and compares both
+					  return true if they are equal
+	*** INPUT ARGS :String346 &leftObj, char *right
+	*** OUTPUT ARGS :
+	*** IN/OUT ARGS :
+	*** RETURN :(*this).equal(Temp)
+	********************************************************************/
+	bool operator ==(const String346 &leftObj, const char *right)
+	{
+		bool b = true;
+		String346 temp(right);
+		b = (leftObj == temp);
+		return b;
+	}
 	/********************************************************************
 	*** FUNCTION : view()
 	*********************************************************************
@@ -453,7 +444,7 @@ namespace StringNS{
 	*** FUNCTION : operator ++  "increment" prefix
 	*********************************************************************
 	*** DESCRIPTION : increase the current string to the lower string according
-					  the characters ASCII values, char by character 
+					  the characters ASCII values, char by character
 	*** INPUT ARGS : none
 	*** OUTPUT ARGS :none
 	*** IN/OUT ARGS :nothing
@@ -463,7 +454,7 @@ namespace StringNS{
 	{
 		for (unsigned int i = 0; i < pInst.getSize(); i++)
 		{
-		   ++pInst.data[i];
+			++pInst.data[i];
 		}
 		return pInst;
 	}
@@ -478,7 +469,7 @@ namespace StringNS{
 	*** RETURN : (*this)
 	********************************************************************/
 
-    String346  operator ++(String346 &pInst, const int)
+	String346  operator ++(String346 &pInst, const int)
 	{
 		String346 temp(pInst);
 		++pInst;
@@ -512,7 +503,7 @@ namespace StringNS{
 	*** IN/OUT ARGS :nothing
 	*** RETURN : (*this)
 	********************************************************************/
-	String346 String346::operator--(const int){
+	String346 String346::operator--(const int) {
 		String346 temp(*this);
 		--(*this);
 		return temp;
@@ -521,7 +512,7 @@ namespace StringNS{
 	*** FUNCTION : operator!()
 	*********************************************************************
 	*** DESCRIPTION : This function checks the charactes in the String346
-					  turns uppercase letters to lower case letters and 
+					  turns uppercase letters to lower case letters and
 					  vice versa, ignoring the other non alphabetic characters
 
 	*** INPUT ARGS :none
@@ -546,7 +537,6 @@ namespace StringNS{
 			}
 		}
 		return(temp);
-
 	}
 	/********************************************************************
 	*** FUNCTION : destroy
@@ -576,30 +566,27 @@ namespace StringNS{
 	********************************************************************/
 	std::ostream & operator<<(std::ostream & sout, const String346 & right)
 	{
-		
-	 for(unsigned int i=0; i<right.getSize(); i++)
-	 {
-		sout<< right.data[i];
-	 }
-	 return sout;
-
+		for (unsigned int i = 0; i < right.getSize(); i++)
+		{
+			sout << right.data[i];
+		}
+		return sout;
 	}
 	/********************************************************************
 	*** FUNCTION : istream
 	*********************************************************************
 	*** DESCRIPTION : extraction operator that prompts the user to insert
-					  characters in the 
+					  characters in the
 	*** INPUT ARGS :none
 	*** OUTPUT ARGS :none
 	*** IN/OUT ARGS :nothing
 	*** RETURN :nothing
 	********************************************************************/
-   std::istream & operator>>(std::istream & sin, String346&right)
+	std::istream & operator >> (std::istream & sin, String346&right)
 	{
 		char inStr[80];
 		sin >> inStr;
 		right = inStr;
-   return sin;
-
+		return sin;
 	}
 }
