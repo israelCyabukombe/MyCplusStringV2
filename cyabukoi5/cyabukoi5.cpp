@@ -131,7 +131,7 @@ namespace StringNS{
 	*** OUTPUT ARGS : 
 	*** IN/OUT ARGS :
 	*** RETURN : (*this) invoking class
-	********************************************************************/
+	******************************************************************/
 	String346 & String346::operator=(const char *inStr1)
 	{
 		String346 temp(inStr1);
