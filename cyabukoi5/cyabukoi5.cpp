@@ -1,5 +1,5 @@
 /********************************************************************
-*** NAME : Israel Cyabukombe
+*** NAME : Israel Cyabukombe the man
 *** CLASS : CSc 346
 *** ASSIGNMENT : 	5
 *** DUE DATE : 4/12/2016
