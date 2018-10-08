@@ -3,7 +3,7 @@
 *** CLASS : CSc 346
 *** ASSIGNMENT : 	5
 *** DUE DATE : 4/12/2016
-*** INSTRUCTOR : GAMRADT
+*** INSTRUCTOR : GAMRADT : One of my great professors in college
 *********************************************************************
 *** DESCRIPTION :This implementation file will implement the a String346
 				 function step by step.The implementationd shows non member

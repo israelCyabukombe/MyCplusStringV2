@@ -3,7 +3,7 @@
 *** CLASS : CSc 346
 *** ASSIGNMENT : 	5
 *** DUE DATE : 4/13/2016
-*** INSTRUCTOR : GAMRADT
+*** INSTRUCTOR : GAMRADT : One of my great professors in college
 *********************************************************************
 *** DESCRIPTION :This is an improvement to the String346 class from the
 				the previous assignment.The header file will defines
