@@ -1,5 +1,5 @@
 /********************************************************************
-*** NAME : Israel Cyabukombe Software Engineer IV, you have made it.
+*** NAME : Israel Cyabukombe Software Engineer IV.
 *** CLASS : CSc 346
 *** ASSIGNMENT : 	5
 *** DUE DATE : 4/13/2016
