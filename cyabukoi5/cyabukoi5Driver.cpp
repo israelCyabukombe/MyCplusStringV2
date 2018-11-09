@@ -13,7 +13,7 @@
 #include<iostream>
 #include<sstream>
 #include"cyabukoi5.h"
-using namespace std;
+using namespace std
 
 using namespace StringNS;
 
