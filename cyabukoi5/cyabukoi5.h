@@ -1,6 +1,6 @@
 /********************************************************************
 *** NAME : Israel Cyabukombe Software Engineer IV.
-*** CLASS : CSc 346
+*** CLASS : CSc 346 OOP the best class ever
 *** ASSIGNMENT : 	5
 *** DUE DATE : 4/13/2016
 *** INSTRUCTOR : GAMRADT : One of my great professors in college
