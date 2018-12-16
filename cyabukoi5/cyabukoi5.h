@@ -1,5 +1,6 @@
 /********************************************************************
-*** NAME : Israel Cyabukombe Software Engineer IV.
+*** NAME : Israel Cyabukombe.
+*** Job  : Web Developer I
 *** CLASS : CSc 346 OOP the best class ever
 *** ASSIGNMENT : 	5
 *** DUE DATE : 4/13/2016
